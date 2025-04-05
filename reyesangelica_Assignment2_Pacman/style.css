@@ -1,0 +1,278 @@
+/*CSS Document*/
+
+/* iMports */
+/*@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');*/
+
+
+/*I'm not sure what's wrong with this. Could it b the file or the way I coded it, but it doesn't seem to be working for me.
+@font-face {
+    font-family: 'Press Start K';
+    src: url('../fonts/prstartk.ttf') format('truetype');
+}*/
+
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('../fonts/PressStart2P-Regular.ttf') format('truetype');
+}
+
+/* Defaults */
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    padding: 25px;
+}
+
+nav ul li {
+    display: inline-block;
+    text-transform: uppercase;
+    margin-left: 50px;
+}
+
+nav ul li a {
+    color: white;
+    transition: color 0.5s;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: yellow;
+}
+
+/* Structure */
+.homepage {
+    padding-top: 100px;
+}
+
+.homepage-img {
+    margin-bottom: 60px;
+    height: 200px;
+}
+
+.pacman2 {
+    margin-top: 60px;
+    margin-right: 100px;
+    width: 60px;
+    position: relative;
+    animation: moveLeft 5s infinite;
+}
+
+.ghosts {
+    margin-top: 60px;
+    width: 60px;
+    position: relative;
+    animation: moveLeft 5s infinite;
+}
+
+@keyframes moveLeft {
+    0% { left: 120%; }
+    100% { left: -100%; }
+}
+
+.insertcoin {
+    color: rgb(255, 255, 255);
+    margin-top: 150px;
+    margin-bottom: 15vh;
+    font-size: 1.5em;
+    animation: blink 5s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+section::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-top: 2px dotted #ffd300;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+#highscores h2 {
+    font-size: 2.5em;
+    margin-top: 20vh;
+    color: #ffd300;
+}
+
+#highscores p {
+    font-size: 2em;
+    margin-top: 10vh;
+    color: #ffffff;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-content: center;
+    place-items: center;
+    align-items: center;
+}
+
+ul{
+    list-style: none;
+        font-size: 1.5em;
+    align-items: center;
+}
+
+li {
+    display: flex;
+    place-items: center;
+    margin: 7px;
+}
+
+p{
+    color: white;
+    text-align: center;
+}
+
+#highscores ul li:nth-child(4n+1) {
+    color: #ffd300;
+}
+
+#highscores ul li:nth-child(4n+2) {
+    color: #ff0401;
+}
+
+#highscores ul li:nth-child(4n+3) {
+    color: #01f8f8;
+}
+
+#highscores ul li:nth-child(4n+4) {
+    color: #ff60b0;
+}
+
+.pacman {
+    position: relative;
+    display: inline;
+    width: 60px;
+    animation: moveRight 5s linear infinite;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    margin-right: 100px;
+}
+
+.blughost {
+    position: relative;
+    display: inline;
+    width: 60px;
+    animation: moveRight 5s linear infinite;
+    margin-top: 10px;
+    margin-bottom: 10vh;
+}
+
+@keyframes moveRight {
+    0% { left: -100%; }
+    100% { left: 120%; }
+}
+
+#howtoplay p {
+    font-size: 2.3em;
+    padding: 60px;
+    margin-bottom: 15vh;
+    color: #fff;
+}
+
+#howtoplay p span {
+    color: yellow;
+    text-transform: uppercase;
+}
+
+#players ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    align-items: left;
+    text-transform: uppercase;
+     margin-left: 10px;
+}
+
+#players ul li {
+    line-height: 15px;
+}
+
+#players ul li:nth-of-type(1) {
+    color: #ff0401;
+}
+
+#players ul li:nth-of-type(2) {
+    color: #ff60b0;
+}
+
+#players ul li:nth-of-type(3) {
+    color: #01f8f8;
+}
+
+#players ul li:nth-of-type(4) {
+    color: #ffd300;
+}
+
+#players ul li img {
+    padding-left: 20px;
+    width: 60px;
+}
+
+.points {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:20px;
+}
+
+.points div {
+    display: flex;
+    gap: 15px;
+}
+
+.points p {
+    margin-left: 20px;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.ghost {
+    width: 60px;
+    padding-left: 15px;
+}
+
+.p1 {
+    margin: 50px 0;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.p1::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    background-color: yellow;
+    margin-left: 60px;
+}
+
+.p2 {
+    margin-bottom: 100px;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.p2::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    background-color: yellow;
+    margin-left: 60px;
+}
+
+/* Footer */
+footer p {
+    font-size: 10px;
+    text-align: center;
+}
